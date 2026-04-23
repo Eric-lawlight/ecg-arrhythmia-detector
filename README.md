@@ -133,6 +133,9 @@ python train.py --use-real-data --records 100 101 102 103 104
 
 > 합성 데이터는 파이프라인 검증 목적. 인터넷 연결 없이 즉시 실행 가능.
 
+![Beat Classes](output/beat_classes.png)
+![Confusion Matrix](output/confusion_matrix.png)
+
 ---
 
 ## 🔧 Feature Engineering
@@ -177,11 +180,14 @@ jupyter notebook fitbit_ecg_analysis.ipynb
 # ※ 토큰 없이도 Demo Mode로 전체 파이프라인 확인 가능합니다
 ```
 
+![Fitbit ECG](fitbit_ecg_waveforms.png)
+
+
 ## 🗺 Roadmap
 
 - [x] 합성 데이터 기반 파이프라인 구축
 - [x] Fitbit Charge 5 Web API 연동 데모 노트북
-- [ ] MIT-BIH 실제 데이터로 모델 재학습
+- [x] MIT-BIH 실제 데이터로 모델 재학습 (10 records, Macro F1: 0.758)
 - [ ] 1D CNN 모델 (PyTorch) 추가
 - [ ] FastAPI 백엔드 → 모바일 앱 연동
 - [ ] Apple Watch / Galaxy Watch 어댑터
