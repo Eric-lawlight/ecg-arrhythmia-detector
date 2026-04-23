@@ -11,10 +11,10 @@
 
 ## 📌 Background
 
-Arrhythmia is responsible for a large share of sudden cardiac deaths worldwide.  
-Conventional ECG reading is time-consuming and subject to inter-observer variability.  
-This project demonstrates a lightweight ML pipeline that classifies single ECG beats
-into three clinically relevant categories defined by the **AAMI EC57 standard**:
+부정맥은 세계적으로 돌연 심장사의 많은 부분을 차지합니다.
+기존 ECG 판독은 시간이 많이 걸리고 관찰자 간 차이가 있을 수 있습니다.
+이 프로젝트는 **AAMI EC57 standard**에서 정의한 세 가지 임상적 중요한 범주로
+단일 ECG 박동을 분류하는 경량 머신러닝 파이프라인을 보여줍니다:
 
 | Label | Class | Clinical Significance |
 |-------|-------|-----------------------|
@@ -83,8 +83,8 @@ Beat  Prediction                      Confidence  Risk
 
 ## 🏥 Using Real MIT-BIH Data
 
-The [MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/)
-is the standard benchmark dataset for ECG arrhythmia research (48 half-hour recordings).
+여기 [MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/)
+는 ECG 부정맥 연구를 위한 표준 벤치마크 데이터셋입니다 (48 half-hour recordings).
 
 **Option A — PhysioNet download (requires free account):**
 ```bash
