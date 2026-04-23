@@ -106,17 +106,32 @@ python train.py --use-real-data --records 100 101 102 103 104
 
 ---
 
-## 📊 Results (Synthetic Data)
+## 📊 Results
+
+### ① MIT-BIH Arrhythmia Database (Real Data — 10 records, 15,425 beats)
+
+| Class | Precision | Recall | F1 | Support |
+|-------|-----------|--------|----|---------|
+| N (Normal) | 0.99 | 1.00 | **0.99** | 2,940 |
+| S (SVEB)   | 1.00 | 0.22 | 0.36 | 9 |
+| V (VEB)    | 0.91 | 0.92 | **0.92** | 136 |
+| **Macro F1** | | | **0.758** | |
+| Weighted F1 | | | **0.990** | |
+
+> **N과 V(실제 위험 부정맥) 감지 성능이 핵심이며 각각 F1 0.99 / 0.92 달성.**  
+> S(SVEB) F1이 낮은 이유는 10개 레코드 기준 샘플 42개의 극단적 클래스 불균형 때문.  
+> 48개 전체 레코드 사용 시 성능 향상 예상.
+
+### ② Synthetic Data (Pipeline Validation)
 
 | Class | Precision | Recall | F1 |
 |-------|-----------|--------|----|
 | N (Normal) | 1.00 | 1.00 | 1.00 |
-| S (SVEB) | 1.00 | 1.00 | 1.00 |
-| V (VEB) | 1.00 | 1.00 | 1.00 |
+| S (SVEB)   | 1.00 | 1.00 | 1.00 |
+| V (VEB)    | 1.00 | 1.00 | 1.00 |
 | **Macro F1** | | | **1.000** |
 
-> ⚠️ Synthetic data is intentionally separable to validate the pipeline.  
-> Real MIT-BIH performance is typically 0.85–0.95 macro F1 depending on records used.
+> 합성 데이터는 파이프라인 검증 목적. 인터넷 연결 없이 즉시 실행 가능.
 
 ---
 
@@ -140,8 +155,8 @@ python train.py --use-real-data --records 100 101 102 103 104
 
 ## 📱 Fitbit Charge 5 연동 데모
 
-`fitbit_ecg_analysis.ipynb` 노트북을 열면 실제 Fitbit Charge 5 ECG 데이터로
-전체 파이프라인을 실행할 수 있어요.
+`fitbit_ecg_analysis.ipynb` 을 열면 실제 Fitbit Charge 5 ECG 데이터로
+전체 파이프라인을 실행할 수 있습니다.
 
 ```
 [Charge 5 ECG 측정 30초]
@@ -159,7 +174,7 @@ python train.py --use-real-data --records 100 101 102 103 104
 # 2. 노트북 실행
 jupyter notebook fitbit_ecg_analysis.ipynb
 # 3. ACCESS_TOKEN 셀에 토큰 입력 후 전체 실행
-# ※ 토큰 없이도 Demo Mode로 전체 파이프라인 확인 가능
+# ※ 토큰 없이도 Demo Mode로 전체 파이프라인 확인 가능합니다
 ```
 
 ## 🗺 Roadmap
