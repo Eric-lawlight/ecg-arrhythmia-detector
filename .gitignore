@@ -1,0 +1,5 @@
+﻿output/model.pkl
+mitbih_data/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
