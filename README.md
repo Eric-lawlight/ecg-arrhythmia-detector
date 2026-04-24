@@ -1,6 +1,6 @@
 # 🫀 ECG Arrhythmia Detector
 
-> AI-powered ECG beat classifier — Normal / SVEB / VEB detection  
+> AI-powered open-data ECG arrhythmia classification experiment   
 > Inspired by the clinical problem space of Mac'AI (Synergy A.I.)
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://python.org)
