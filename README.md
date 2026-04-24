@@ -35,6 +35,14 @@
 
 ---
 
+## 📂 Documentation
+
+| 문서 | 내용 |
+|------|------|
+| [📊 results.md](results.md) | 실험 데이터셋, 모델 성능, confusion matrix |
+| [⚠️ limitations.md](limitations.md) | 현재 한계점 및 개선 계획 |
+| [🔬 validation.md](validation.md) | 검증 방법론 및 재현성 가이드 |
+
 ## 🗂 Project Structure
 
 ```
